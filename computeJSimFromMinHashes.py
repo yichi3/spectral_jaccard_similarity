@@ -7,11 +7,10 @@ import shutil, itertools
 
 ap = argparse.ArgumentParser(description="Reproduce the experiments in the manuscript")
 ap.add_argument("--dataset",  help="Folder to dataset eg. /data/MAB_alignment/ecoli_simulated2", default="NCTC74_filtered/")
-ap.add_argument("--num_jobs", help="Num of parallel experiments", type=int, default=64 )
 
 args = ap.parse_args()
 dataset    = args.dataset        
-num_jobs   = args.num_jobs
+num_jobs   = mp.cpu_count()
 
 if dataset[-1] != '/':
 	dataset += '/'

@@ -43,14 +43,12 @@ def runSim(args):
 
 ap = argparse.ArgumentParser(description="Reproduce the experiments in the manuscript")
 ap.add_argument("--dataset",  help="Folder to dataset eg. NCTC5047_filtered", default="NCTC74_filtered/")
-ap.add_argument("--num_jobs", help="Num of parallel experiments", type=int, default=64 )
 ap.add_argument("--num_hashes",  help="Number of hashes to compute", type=int,default=10)
 
 args = ap.parse_args()
-num_jobs   = args.num_jobs
+num_jobs   = mp.cpu_count()
 dataset    = args.dataset        
 numHashes  = args.num_hashes
-num_jobs   = 50
 
 if dataset[-1] != '/':
 	dataset += '/'
