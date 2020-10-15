@@ -1,4 +1,8 @@
 .DS_Store
-NCTC74_filtered/minHashes
-*.png
-
+.vscode/
+.idea/
+Test/NCTC74_filtered/minHashes
+Test/*.png
+Test/.DS_Store
+sjs/.DS_Store
+sjs/NCTC74_filtered/
