@@ -6,3 +6,4 @@ Test/*.png
 Test/.DS_Store
 sjs/.DS_Store
 sjs/NCTC74_filtered/
+AUCs/

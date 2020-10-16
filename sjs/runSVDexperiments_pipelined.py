@@ -22,8 +22,8 @@ def runSim(args):
 	dataset,numRandReads,numHashes = args[1]
 	# Test use, before set numReads = 1000 to load the first 1000 read from dataset
 	# now for test, just load first 3 reads
-	# numReads = 1000
-	numReads = 3
+	numReads = 1000
+	# numReads = 3
 
 	## load precomputed minHashes
 	minHashArr = np.zeros((numReads,numHashes))
@@ -51,8 +51,8 @@ def runSim(args):
 
 	## compute SVd
 	U,s,VT = np.linalg.svd(empiricalMatrix - np.ones(empiricalMatrix.shape))
-	print(empiricalMatrix - np.ones(empiricalMatrix.shape))
-	print()
+	# print(empiricalMatrix - np.ones(empiricalMatrix.shape))
+	# print()
 
 	u = U[:,0]
 	pHatSVD = 1-np.abs(u[:n-1])/np.abs(np.median(u[n-1:]))

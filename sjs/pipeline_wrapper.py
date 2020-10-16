@@ -39,7 +39,7 @@ for i in range(len(datasetLst)):
     print(cmd_12)
     os.system(cmd_12)
 
-    cmd_21 = "python computeJSim.py --dataset {}_filtered --num_jobs {}".format(
+    cmd_21 = "python computeJSim2.py --dataset {}_filtered --num_jobs {}".format(
     bact, num_jobs)
     print(cmd_21)
     os.system(cmd_21)
