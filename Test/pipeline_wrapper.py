@@ -36,3 +36,7 @@ for i in tqdm(range(lower, upper+1, step)):
     os.system(cmd_2)
 
 # compute the square error vs number of hash functions
+cmd_3 = "python mse_vs_numHashes.py --dataset {}_filtered --lower {} --upper {} --step {}".format(
+    bact, lower, upper, step)
+print(cmd_3)
+os.system(cmd_3)
